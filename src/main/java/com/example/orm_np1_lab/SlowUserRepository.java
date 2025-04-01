@@ -6,8 +6,6 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface UserRepository extends JpaRepository<User, Long> {
-    @Query("SELECT u FROM User u WHERE u.name LIKE %:name%")
-    List<User> findUsersWithName(@Param("name") String name);
+public interface SlowUserRepository extends JpaRepository<SlowUser, Long> {
 }
 
